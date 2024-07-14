@@ -3,26 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elementos color, range e file em HTML</title>
+    <title>Select, datalist e textarea em HTML</title>
 </head>
 <body>
-    <h1>Elementos color, range e file em HTML</h1>
-    
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <h1>Select, datalist e textarea em HTML</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+
         <p>
-            <label for="icor">Cor:</label>
-            <input type="color" name="cor"
-            id="icor" value="#00ff00">
+            <label for="iest">Estado</label>
+            <select name="Estado" id="iest">
+                <optgroup label="Região Sudeste">
+                    <option value="MG" selected>Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MG">Maranhão</option>
+                    <option value="RJ">Pernambuco</option>
+                    <option value="SP">Rio Grande do Norte</option>
+                </optgroup>
+            </select>    
+
+               
         </p>
         <p>
-            <label for="inivel">Nível de sastifação:</label>
-            <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="Prof">Professor</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
         </p>
 
         <p>
-            <label for="ifoto">Foto do Perfil:</label>
-            <input type="file" name="Foto" id="ifoto">
+          
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
         </p>
     </form>
+    
+    
 </body>
 </html>
