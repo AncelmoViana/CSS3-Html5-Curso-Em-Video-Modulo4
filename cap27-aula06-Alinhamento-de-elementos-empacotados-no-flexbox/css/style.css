@@ -1,38 +1,16 @@
 @charset "UTF-8";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
+div.container{
     background-color: lightsalmon;
-   
-    
-}
-main{
-    background-color: lightgreen;
-    width: 90vw;
-    height: 90vh;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  
 }
-section{
-    position: relative;
-    background-color: lightseagreen;
-    height: 200px;
-    width: 200px;
+
+div.item{
+    background-color: lightblue;
+    border: 1px solid black;
+    flex: auto;
+    text-align: center;
     
-}
-main section h1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 140px;
-    transform: translate(-50%, -50%);
 }
